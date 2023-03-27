@@ -45,42 +45,34 @@ function calcular() {
     const eternalWinterMin = ((lvl / 5) + (mlvl * 6)).toFixed(0)
   
       // mostrar resultados
-      document.getElementById("light-healing-max").textContent = lightHealingMax;
-      document.getElementById("light-healing-min").textContent = lightHealingMin;
-      document.getElementById("intense-healing-max").textContent = intenseHealingMax;
-      document.getElementById("intense-healing-min").textContent = intenseHealingMin;
-      document.getElementById("wound-cleansing-max").textContent = woundCleansingMax;
-      document.getElementById("wound-cleansing-min").textContent = woundCleansingMin;
-      document.getElementById("mass-healing-max").textContent = massHealingMax;
-      document.getElementById("mass-healing-min").textContent = massHealingMin;
-      document.getElementById("ultimate-healing-max").textContent = ultimateHealingMax;
-      document.getElementById("ultimate-healing-min").textContent = ultimateHealingMin;
-      document.getElementById("holy-missile-max").textContent = holyMissileMax;
-      document.getElementById("holy-missile-min").textContent = holyMissileMin;
-      document.getElementById("sudden-death-max").textContent = suddenDeathMax;
-      document.getElementById("sudden-death-min").textContent = suddenDeathMin;
-      document.getElementById("thunderstorm-stone-shower-max").textContent = thunderstormStoneShowerMax;
-      document.getElementById("thunderstorm-stone-shower-min").textContent = thunderstormStoneShowerMin;
-      document.getElementById("avalanche-great-fireball-max").textContent = avalancheGreatFireballMax;
-      document.getElementById("avalanche-great-fireball-min").textContent = avalancheGreatFireballMin;
-      document.getElementById("energy-beam-max").textContent = energyBeamMax;
-      document.getElementById("energy-beam-min").textContent = energyBeamMin;
-      document.getElementById("great-energy-beam-max").textContent = greatEnergyBeamMax;
-      document.getElementById("great-energy-beam-min").textContent = greatEnergyBeamMin;
-      document.getElementById("divine-caldera-max").textContent = divineCalderaMax;
-      document.getElementById("divine-caldera-min").textContent = divineCalderaMin;
-      document.getElementById("terra-wave-max").textContent = terraWaveMax;
-      document.getElementById("terra-wave-min").textContent = terraWaveMin;
-      document.getElementById("energy-wave-max").textContent = energyWaveMax;
-      document.getElementById("energy-wave-min").textContent = energyWaveMin;
-      document.getElementById("rage-of-the-skies-max").textContent = rageOfTheSkiesMax;
-      document.getElementById("rage-of-the-skies-min").textContent = rageOfTheSkiesMin;
-      document.getElementById("hells-core-max").textContent = hellsCoreMax;
-      document.getElementById("hells-core-min").textContent = hellsCoreMin;
-      document.getElementById("wrath-of-nature-max").textContent = wrathOfNatureMax;
-      document.getElementById("wrath-of-nature-min").textContent = wrathOfNatureMin;
-      document.getElementById("eternal-winter-max").textContent = eternalWinterMax;
-      document.getElementById("eternal-winter-min").textContent = eternalWinterMin;
+      const spells = {
+        "light-healing": [lightHealingMax, lightHealingMin],
+        "intense-healing": [intenseHealingMax, intenseHealingMin],
+        "wound-cleansing": [woundCleansingMax, woundCleansingMin],
+        "mass-healing": [massHealingMax, massHealingMin],
+        "ultimate-healing": [ultimateHealingMax, ultimateHealingMin],
+        "holy-missile": [holyMissileMax, holyMissileMin],
+        "sudden-death": [suddenDeathMax, suddenDeathMin],
+        "thunderstorm-stone-shower": [thunderstormStoneShowerMax, thunderstormStoneShowerMin],
+        "avalanche-great-fireball": [avalancheGreatFireballMax, avalancheGreatFireballMin],
+        "energy-beam": [energyBeamMax, energyBeamMin],
+        "great-energy-beam": [greatEnergyBeamMax, greatEnergyBeamMin],
+        "divine-caldera": [divineCalderaMax, divineCalderaMin],
+        "terra-wave": [terraWaveMax, terraWaveMin],
+        "energy-wave": [energyWaveMax, energyWaveMin],
+        "rage-of-the-skies": [rageOfTheSkiesMax, rageOfTheSkiesMin],
+        "hells-core": [hellsCoreMax, hellsCoreMin],
+        "wrath-of-nature": [wrathOfNatureMax, wrathOfNatureMin],
+        "eternal-winter": [eternalWinterMax, eternalWinterMin]
+      };
+      
+      for (const spell in spells) {
+        const maxElem = document.getElementById(spell + "-max");
+        const minElem = document.getElementById(spell + "-min");
+        maxElem.textContent = spells[spell][0];
+        minElem.textContent = spells[spell][1];
+      }
+      
 
 
       
