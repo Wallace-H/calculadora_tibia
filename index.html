@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculadora - Tibia</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="container">
+    <h1>Calculadora - Tibia</h1>
+    <form>
+        <label for="lvl">Level:</label>
+        <input type="number" id="lvl" name="lvl">
+        <label for="mlvl">Magic Level:</label>
+        <input type="number" id="mlvl" name="mlvl">
+        <button type="button" onclick="calcular()">Calcular</button>
+    </form>
+    <div id="resultado">
+        <h2>Magias de Cura</h2>
+        <ul>
+            <li>Exura: <span id="light-healing-min"></span> - <span id="light-healing-max"></span></li>
+            <li>Exura Gran: <span id="intense-healing-min"></span> - <span id="intense-healing-max"></span></li>
+            <li>Exura Ico: <span id="wound-cleansing-min"></span> - <span id="wound-cleansing-max"></span></li>
+            <li>Mas Res: <span id="mass-healing-min"></span> - <span id="mass-healing-max"></span></li>
+            <li>Exura Vita: <span id="ultimate-healing-min"></span> - <span id="ultimate-healing-max"></span></li>
+        </ul>
+        <h2>Runas de Ataque</h2>
+        <ul>
+            <li>Holy Missile: <span id="holy-missile-min"></span> - <span id="holy-missile-max"></span></li>
+            <li>Sudden Death: <span id="sudden-death-min"></span> - <span id="sudden-death-max"></span></li>
+            <li>Thunderstorm/Stone Shower: <span id="thunderstorm-stone-shower-min"></span> - <span id="thunderstorm-stone-shower-max"></span></li>
+            <li>Avalanche/Great Fireball: <span id="avalanche-great-fireball-min"></span> - <span id="avalanche-great-fireball-max"></span></li>
+        </ul>
+        <h2>Magias de Ataque</h2>
+        <ul>
+            <li>Exevo Vis Lux: <span id="energy-beam-min"></span> - <span id="energy-beam-max"></span></li>
+            <li>Exevo Gran Vis Lux: <span id="great-energy-beam-min"></span> - <span id="great-energy-beam-max"></span></li>
+            <li>Exevo Mas San: <span id="divine-caldera-min"></span> - <span id="divine-caldera-max"></span></li>
+            <li>Exevo Tera Hur: <span id="terra-wave-min"></span> - <span id="terra-wave-max"></span></li>
+            <li>Exevo Vis Hur: <span id="energy-wave-min"></span> - <span id="energy-wave-max"></span></li>
+            <li>Exevo Gran Mas Vis: <span id="rage-of-the-skies-min"></span> - <span id="rage-of-the-skies-max"></span></li>
+            <li>Exevo Gran Mas Flam: <span id="hells-core-min"></span> - <span id="hells-core-max"></span></li>
+            <li>Exevo Gran Mas Tera: <span id="wrath-of-nature-min"></span> - <span id="wrath-of-nature-max"></span></li>
+            <li>Exevo Gran Mas Frigo: <span id="eternal-winter-min"></span> - <span id="eternal-winter-max"></span></li>
+        </ul>
+    </div>
+    <script src="script.js"></script>
+    </div>
+</body>
+</html>
